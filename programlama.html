@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+<head>
+<!--responsive için-->
+<meta http-equiv="content-type" content="text/html" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="basak burcu" />
+<meta charset="utf-8">
+<!--width=device-width meta görüntü alani degeri kullanildiginda, cihazdan bagimsiz piksel sayisi
+	 kullanilarak sayfanin ekranin genisligiyle eslestirilmesi talimati verilir. 
+	 kaynak: https://developers.google.com/web/fundamentals/design-and-ux/responsive/?hl=tr-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>basak burcu sogut</title>
+<link rel="stylesheet" type="text/css" href="style.css"> 
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/83a8699287.js" crossorigin="anonymous"></script>  
+<!--bu script netten alınmıştır: https://fontawesome.com/start-->
+<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"> <!--logom için bu script eklenmiştir. https://www.canerozgurel.com/4-adet-hazir-responsive-footer-tasarimi.html-->
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>  <!---yukarı çık kodu netten alınmıştır. Rapora kaynak konulmuştur: https://www.gencayyildiz.com/blog/jquery-ile-yukari-cik-buton-uygulamasi/-->
+    <script type="text/javascript">
+        $(function () {
+            $("#top").click(function () {
+                // Sayfamızı kaydıracak olan kod burasıdır. https://www.gencayyildiz.com/blog/jquery-ile-yukari-cik-buton-uygulamasi/
+                $("html,body").stop().animate({ scrollTop: "0" }, 1000);
+            });
+        });
+        $(window).scroll(function () {
+            var uzunluk = $(document).scrollTop();
+            if (uzunluk > 300) $("#top").fadeIn(500);
+            else { $("#top").fadeOut(500); }
+        });
+    </script>
+    <script> //responsive için http://veblebi.com/responsive-nav-menu-css/
+		function toggle() {
+		 if (document.getElementById("nav-ul").style.display=="block"){
+		   document.getElementById("nav-ul").style.display=""
+			document.getElementById("nav-toggle-alt").style.display="none"
+		  }
+		 else{
+		  document.getElementById("nav-ul").style.display="block";
+		  document.getElementById("nav-toggle-alt").style.display="block"
+		 }
+		}
+		</script>
+<style type="text/css">
+ * {box-sizing: border-box;}
+	body {font-family: Verdana, sans-serif;}
+.div {
+    display: inline-block;
+    height: 40%;
+    width: 40%;
+    margin: 10px;
+    color: #FFF;
+    margin-left: 5%;
+    margin-top: 0%;
+    margin-bottom: 3%;
+}   
+
+.div p{
+	color: #fff;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 25px; /*satır arası bosluk*/
+}
+.div h3{
+    padding: 0;
+	color: #fff;
+	font-family: 'ubuntu', sans-serif;
+	font-weight: 700;
+}
+.div a{
+    font-size: 15px;
+    color: #fff;
+    margin-top: 15px;
+    border: solid 2px;
+    box-shadow: 3px 3px 4px #fff;
+}
+.div img{
+    border-radius: 10px;
+}
+</style>
+</head>
+<body>
+        <div id="header">
+            <div class="shell">
+                <!-- Logo -->
+                <h1 id="logo"><a href="index.html"> Web Tasarım Mekanım</a></h1>
+                <!-- /Logo -->
+            </div>
+            <div class="basak">
+                <h3>Basak Burcu <span>SOGUT &nbsp; &nbsp; &nbsp;           
+                    <a href="https://www.facebook.com/basakkburcuu" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/basakkkburcuuu" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/basakkburcuu/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </span></h3>
+            </div>
+        </div>
+<!---menu-->
+<header>
+    <nav>
+    <div id="nav-toggle" onclick="toggle()">Menü</div>
+    <ul id="nav-ul">
+    <li><a href="index.html">Anasayfa <i class="fas fa-house-damage"></i></a>   <!---iconları aldığım kaynak: https://fontawesome.com/start--></li>
+    <li><a href="hakkımda.html">Hakkımda <i class="fas fa-id-card-alt"></i></a></li>
+    <li><a href="egitim.html" >Eğitim Serüvenim <i class="fas fa-university"></i></a></li>
+    
+    <li class="dropdown">
+        <a href="#">Bu Zamana Kadar <i class="fas fa-arrow-down"></i></a>
+        <ul>
+        <li><a href="ilgi.html">Başarılarım</a></li>
+        <li><a href="gezi.html">Gezdiğim Yerler</a></li>
+        </ul>
+    </li>
+
+    <li class="dropdown">
+    <a href="#">Neler Yapıyorum?</a>
+    <ul>
+    <li><a href="admin.html" >Admin Paneli <i class="fas fa-user-lock"></i></a></li>
+    <li><a href="design.html" >UI Design <i class="fas fa-crop-alt"></i></a></li>
+    <li><a href="html,css.html">HTML,CSS <i class="far fa-file-code"></i></a></li>
+    <li><a href="js.html">JS <i class="fab fa-node-js"></i></a></li>
+    </ul>
+    </li>
+    <!-- #sub menu -->
+    <li class="dropdown">
+    <a href="#">Bilgi Deposu</a>
+    <ul>
+    <li><a href="algoritma.html">Algoritma Mantığı</a></li>
+    <li><a href="programlama.html">Programlama Dilleri</a></li>
+    <li><a href="veri.html">Veri Tabanı</a></li>
+    <li><a href="angular.html">JS Framework</a></li>
+    </ul>
+    </li>
+    <!-- #sub menu -->
+    <li class="dropdown">
+    <a href="#">Blogdan Postlar</a>
+    <ul>
+    <li><a href="dijital.html">Dijital Pazarlama</a></li>
+    <li><a href="sistem.html">Sistem Uzmanlığı</a></li>
+    </ul>
+    </li>
+    <li><a href="iletisim.html" >İletişim <i class="fas fa-address-card"></i></a></li>
+    </ul>
+    <div id="nav-toggle-alt" onclick="toggle()">X</div>
+    </nav>
+    </header>
+    <!--menu bitis-->
+<!--#Ana Div Baslangic-->
+<div id="ana_div" style="background: url(images/programlama.png); box-shadow: 11px 3px 100px #000;;">
+    <h1 style="color: #FFF; padding-top: 2%;">EN POPÜLER PROGRAMLAMA DİLLERİ</h1>
+        <div class="div" id="div">
+            <img src="images/programlama2.png" width="100%" height="100%">          
+        </div>
+        <div class="div" id="div2" >
+                <h3>Bu Programlama Dillerini Bilirseniz Her Zaman İş Bulabilirsiniz</h3> <br>
+                <p>Ünlü girişim kapitalisti Marc Andreessen “Yazılım dünyayı yiyor – Software is eating the World.” diyor.
+                    <b>Birileri mutlaka yazılımcı olmalı ve bu kişi neden sen olmayasın?</b>
+                    Binlerce programlama dili mevcut, bunların bazıları ise diğerlerinden daha popüler tabii ki.<br>
+                    Çoğu şirket yeni bir yetenekli yazılım uzmanı arayacağı zaman, Apple Swift ve Google Go gibi, yeni çıkan programlama dillerine nispeten eski ve alışagelmiş programlama dillerine aşina olan kişileri daha çok tercih ettiklerini belirtiyor.</p>
+                <br><a href="https://smartpro.com.tr/programlama-dilleri/" target="_blank" >Ayrıntılı Bilgi İçin Tıklayınız.</a>
+        </div>
+        <div class="div" id="div2">
+                <h3>JAVA</h3><br>
+                <p>Başlangıçta 1991 yılında akıllı televizyonlar için programlama dili olarak icat edildi. Oracle Java hala dünyanın en popüler programlama dilidir. Java basit, modern, nesne yönelimli, tip-korumalı ve C ile C++ dillerinin iyi özeliklerini almış bir dildir. Fazla olarak, her platformda çalışabilme yeteneğine sahiptir.</p>
+                <br><a href="https://www.java.com/tr/" target="_blank" >Ayrıntılı Bilgi İçin Tıklayınız.</a><br><br><br><br>
+        </div>
+        <div class="div" id="div">
+            <img src="images/java.png" width="100%" height="100%">
+        </div>
+        <div class="div" id="div">
+            <img src="images/c.png" width="100%" height="100%">  
+        </div>
+        <div class="div" id="div2">
+                <h3>C</h3><br>
+                <p>1972 yılında Dennis Ritchie tarafından Bell Telefon Labaraturvarında Unix işletim sistemi ile kullanılmak için tasarlanmıştır. C, özellikle sistem programlamada sembolik makine dili (Asembler) ile tercih edilmektedir. İşletim sistemleri, derleyiciler ve debug gibi aşağı seviyeli sistem programlarının yazılımında yoğun olarak C programlama dili kullanılır.</p>
+                <br><a href="https://www.bilgigunlugum.net/prog/cprog/c_giris" target="_blank" > Ayrıntılı Bilgi İçin Tıklayınız.</a><br><br>
+        </div>
+        <div class="div" id="div2">
+                <h3>Python:</h3><br>
+                <p> Bu programlama dilinin geçmişi 1989 yılına kadar uzanmaktadır. Çoğu programcı yazılıma başlamak için en kolay dil olduğunu savunuyor. Eğer Python programlama dilini öğrenirseniz, İnternet’te saatlerce ücretsiz PDF birleştirme programı aramak veya profesyonel yazılımlara onlarca dolar para vermek yerine, belgelerinizi birleştirip işinizi görecek programı kendiniz yazabilirsiniz.</p>
+                <br><a href="https://www.python.org/" target="_blank" > Ayrıntılı Bilgi İçin Tıklayınız.</a><br><br>
+        </div>
+        <div class="div" id="div">
+                <img src="images/python.png" width="100%" height="100%"> 
+        </div>
+        <div class="div" id="div">
+            <img src="images/php.png" width="100%" height="100%">    
+        </div>
+        <div class="div" id="div2">
+            <h3>PHP</h3><br>
+            <p> PHP yazılım dili web sitelerini programlamak  için kullanılmaktadır ve kullanımı da son derece yaygındır. Hatta bazı tahminlere göre kullanım oranı üçte bir daha fazla diğer programlama dillerine göre. Facebook, WordPress, Yahoo gibi büyük siteler PHP dilini kullanmaktadırlar.</p><br>
+            <br><a href="https://www.bilgigunlugum.net/webprog/php/php_giris" target="_blank" > Ayrıntılı Bilgi İçin Tıklayınız.</a><br><br><br><br><br><br><br>
+        </div>
+        <div class="div" id="div2">
+            <br><b style="color: #fff; font-size: 20px;">Visual Basic:</b><br><br>
+            <p>Microsoft Visual Basic ( .NET) olay yönlendirmeli, üst seviye, nesne tabanlı ve görsel bir programlama dilidir. Visual Basic, çok amaçlı ve aynı zamanda kolay bir şekilde program geliştirmenizi sağlayan bir programlama ortamıdır. Visual olmak (görsellik), simgelerle yapılan iletişimi ifade eder. Visual Basic programlarında ortamın tasarımı öncelikli olarak yapılan işlemdir. Kod yazmak ikincil kalır.</p>
+            <br><a href="https://docs.microsoft.com/tr-tr/dotnet/visual-basic/" target="_blank" > Ayrıntılı Bilgi İçin Tıklayınız.</a><br><br><br><br><br><br>
+        </div>
+        <div class="div" id="div">
+            <img src="images/visual.png" width="100%" height="100%"><br><br><br><br>
+        </div>
+        <div class="div" id="div">
+            <img src="images/r.png" width="100%" height="100%">    
+        </div>
+        <div class="div" id="div2">
+            <br><b style="color: #fff; font-size: 20px;">R:</b><br><br>
+            <p>İstatistikçiler ve veri analizi yapmak isteyen herkes için tercih edilen bir programlama dilidir. Google, matematikçilerine verdiği güçle R’nin büyük bir hayranı olarak rekor kırdı. R programı, C ve Java gibi birçok programlama dili ile uyumlu çalışabilmektedir. R, içerisinde grafikler oluşturan etkin araçlara sahiptir. Ayrıca isterseniz kendi grafiklerinizi kendiniz oluşturabilirsiniz.</p>
+            <br><a href="https://www.elektrikport.com/teknik-kutuphane/r-programlama-dersleri-1-bolum/22253" target="_blank">Ayrıntılı Bilgi İçin Tıklayınız.</a><br><br><br>
+        </div>
+        <div class="div" id="div2">
+            <br><b style="color: #fff; font-size: 20px;">Go:</b><br><br>
+            <p>Go programlama dili Google’ın yani dünyanın en yoğun arama motorunu güçlendirmek için tasarlanmıştır. Güvenirliği ve bütünlüğü çok önemli olduğu için geliştiricilere kapatılmıştır. Go dili geliştirici ekibinin temel prensiplerinden biri de “bir işi yapmanın en iyi yolunu bulursan farklı yöntemlere gerek yoktur” üzerine kuruludur. </p>
+            <br><a href="http://devnot.com/2017/go-programlama-diline-genel-bakis/" target="_blank">Ayrıntılı Bilgi İçin Tıklayınız.</a><br><br><br><br>
+        </div>
+        <div class="div" id="div">
+            <img src="images/go.png" width="100%" height="100%">    <br><br><br><br>
+        </div>
+        <div class="div" id="div">
+            <img src="images/ruby.png" width="100%" height="100%">    
+        </div>
+        <div class="div" id="div2">
+            <br><b style="color: #fff; font-size: 20px;">Ruby:</b><br><br>
+            <p>Python dili gibi geliştiriciler bu 24 yaşındaki programlama dilini çok seviyorlar çünkü kodu okuması ve yazması kolaydır. Ruby dilinin resmi sloganı “Bir programcının en yakın arkadaşı.”dır.</p>
+            <br><a href="https://www.ruby-lang.org/tr/" target="_blank">Ayrıntılı Bilgi İçin Tıklayınız.</a><br><br><br><br><br>
+        </div>
+        <div class="div" id="div2">
+            <br><b style="color: #fff; font-size: 20px;">Groovy:</b><br><br>
+            <p> Groovy, Java dilinin bir dalıdır ve 2007 yılının başlangıcından bu yana kod yazmayı kolaylaştırması ile bilinmektedir.  Groovy, Java koduyla tam bir uyum sağladığından IBM, Google ve Target gibi büyük şirketlerdeki geliştiricileri kazanmaya devam etmektedir.</p>
+            <br><a href="https://kodcu.com/2011/07/groovy-nedir/" target="_blank">Ayrıntılı Bilgi İçin Tıklayınız.</a>
+        </div>
+        <div class="div" id="div">
+            <img src="images/groovy.png" width="100%" height="100%">    
+        </div>
+        <br><br><br>
+</div>
+    <!--#Ana Div Bitis-->
+<footer class="footer-burcu" style="margin-top: 3%;">
+    <div class="footer-left">
+        <h3>Basak Burcu<span>SOGUT</span></h3>
+        <p class="footer-links">
+        <a href="index.html">Ana Sayfa</a>
+        ·
+        <a href="hakkımda.html">Hakkımda</a>
+        ·
+        <a href="iletisim.html" target="_blank">İletişim</a>
+        </p>
+        <p class="footer-textburcu">© 2019 Tüm Hakları Saklıdır.</p>
+        </div>
+        <div class="footer-center">
+        <div>
+            <a href="https://www.google.com/maps/place/Kocaeli+%C3%9Cniversitesi+Umuttepe+Kamp%C3%BCs%C3%BC+B+Kap%C4%B1s%C4%B1/@40.8233561,29.9253451,15z/data=!4m5!3m4!1s0x0:0xdb29061ce8f77254!8m2!3d40.8233561!4d29.9253451" style="cursor: pointer;" target="_blank"><i class="fa fa-map-marker"></i></a>
+        <p><span>Umuttepe Kampüsü</span> Kocaeli, Türkiye</p>
+        </div>
+        <div>
+        <i class="fa fa-phone"></i>
+        <p>+0555 555 5050</p>
+        </div>
+        <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:basakburcusogut@gmail.com">basakburcusogut@gmail.com</a></p>
+        </div>
+        </div>
+        <div class="footer-right">
+        <p class="footer-basakhak1">
+        <span>Hakkımda</span>
+        Başak Burcu SÖGÜT 171307009 <br>
+        Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliği Bölümü 3.Sınıf</p>
+        <div class="footer-icons">
+        <a href="https://www.facebook.com/basakkburcuu" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://twitter.com/basakkkburcuuu" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UCuthM9l2SvTLiuFMCEerYJQ?view_as=subscriber" target="_blank"><i class="fab fa-youtube-square"></i></a>
+        <a href="https://www.linkedin.com/in/ba%C5%9Fak-burcu-s%C3%B6g%C3%BCt-95b611153/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/basakkburcuu/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+<div id="top">
+    <p style="text-align: center;"><img src="images/yukari.png" alt=""></p>  <!--iconun kaynağı: https://fontawesome.com/icons/arrow-circle-up?style=solid-->
+</div>
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+<head>
+ <!--responsive için-->
+<meta http-equiv="content-type" content="text/html" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="basak burcu" />
+<meta charset="utf-8">
+<title>design</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/83a8699287.js" crossorigin="anonymous"></script>  
+<!--bu script netten alınmıştır: https://fontawesome.com/start-->
+<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"> <!--logom için bu script eklenmiştir. https://www.canerozgurel.com/4-adet-hazir-responsive-footer-tasarimi.html-->
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>  <!---yukarı çık kodu netten alınmıştır. Rapora kaynak konulmuştur: https://www.gencayyildiz.com/blog/jquery-ile-yukari-cik-buton-uygulamasi/-->
+    <script type="text/javascript">
+        $(function () {
+            $("#top").click(function () {
+                // Sayfamızı kaydıracak olan kod burasıdır.
+                $("html,body").stop().animate({ scrollTop: "0" }, 1000);
+            });
+        });
+        $(window).scroll(function () {
+            var uzunluk = $(document).scrollTop();
+            if (uzunluk > 300) $("#top").fadeIn(500);
+            else { $("#top").fadeOut(500); }
+        });
+    </script>
+    <script> //responsive için
+		function toggle() {
+		 if (document.getElementById("nav-ul").style.display=="block"){
+		   document.getElementById("nav-ul").style.display=""
+			document.getElementById("nav-toggle-alt").style.display="none"
+		  }
+		 else{
+		  document.getElementById("nav-ul").style.display="block";
+		  document.getElementById("nav-toggle-alt").style.display="block"
+		 }
+		}
+		</script>
+<style type="text/css">
+    * {box-sizing: border-box;}
+	body {font-family: Verdana, sans-serif;}
+#ana_div {
+    height: 100%;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+#ana_div h1{
+    color: #4b4b55;
+	font-size: 30px;
+	margin-top:50px;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-indent: 20px;
+}
+.div {
+    display: inline-block;
+    height: 40%;
+    width: 40%;
+    margin: 10px;
+    color: #FFF;
+    margin-left: 5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.div h3{
+    padding: 0;
+	color: #4b4b55;
+	font-family: 'ubuntu', sans-serif;
+	font-weight: 700;
+}
+
+.div p{
+	color: #81818b;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 25px; /*satır arası bosluk*/
+}
+.div a{
+    color: #000;
+    margin-top: 15px;
+}
+.div image{
+    width: 100%;
+    height: 100%;
+}
+
+.div video{
+    border-radius: 10px;
+}
+</style>
+</head>
+<body>
+        <div id="header">
+            <div class="shell">
+                <!-- Logo -->
+                <h1 id="logo"><a href="index.html"> Web Tasarım Mekanım</a></h1>
+                <!-- /Logo -->
+            </div>
+            <div class="basak">
+                <h3>Basak Burcu <span>SOGUT &nbsp; &nbsp; &nbsp;           
+                    <a href="https://www.facebook.com/basakkburcuu" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/basakkkburcuuu" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/basakkburcuu/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </span></h3>
+            </div>
+        </div>
+<!---menu-->
+<header>
+    <nav>
+    <div id="nav-toggle" onclick="toggle()">Menü</div>
+    <ul id="nav-ul">
+    <li><a href="index.html">Anasayfa <i class="fas fa-house-damage"></i></a>   <!---iconları aldığım kaynak: https://fontawesome.com/start--></li>
+    <li><a href="hakkımda.html">Hakkımda <i class="fas fa-id-card-alt"></i></a></li>
+    <li><a href="egitim.html" >Eğitim Serüvenim <i class="fas fa-university"></i></a></li>
+    
+    <li class="dropdown">
+        <a href="#">Bu Zamana Kadar <i class="fas fa-arrow-down"></i></a>
+        <ul>
+        <li><a href="ilgi.html">Başarılarım</a></li>
+        <li><a href="gezi.html">Gezdiğim Yerler</a></li>
+        </ul>
+    </li>
+
+    <li class="dropdown">
+    <a href="#">Neler Yapıyorum?</a>
+    <ul>
+    <li><a href="admin.html" >Admin Paneli <i class="fas fa-user-lock"></i></a></li>
+    <li><a href="design.html" >UI Design <i class="fas fa-crop-alt"></i></a></li>
+    <li><a href="html,css.html">HTML,CSS <i class="far fa-file-code"></i></a></li>
+    <li><a href="js.html">JS <i class="fab fa-node-js"></i></a></li>
+    </ul>
+    </li>
+    <!-- #sub menu -->
+    <li class="dropdown">
+    <a href="#">Bilgi Deposu</a>
+    <ul>
+    <li><a href="algoritma.html">Algoritma Mantığı</a></li>
+    <li><a href="programlama.html">Programlama Dilleri</a></li>
+    <li><a href="veri.html">Veri Tabanı</a></li>
+    <li><a href="angular.html">JS Framework</a></li>
+    </ul>
+    </li>
+    <!-- #sub menu -->
+    <li class="dropdown">
+    <a href="#">Blogdan Postlar</a>
+    <ul>
+    <li><a href="dijital.html">Dijital Pazarlama</a></li>
+    <li><a href="sistem.html">Sistem Uzmanlığı</a></li>
+    </ul>
+    </li>
+    <li><a href="iletisim.html" >İletişim <i class="fas fa-address-card"></i></a></li>
+    </ul>
+    <div id="nav-toggle-alt" onclick="toggle()">X</div>
+    </nav>
+    </header>
+    <!--menu bitis-->
+<!--#Ana Div Baslangic-->
+<div id="ana_div">
+    <h1>UI DESIGN</h1>
+        <div class="div" id="div">
+                <img src="images/design.png"  width="100%" height="100%">
+        </div>
+        <div class="div" id="div2">
+                <h3>UI Design Nedir?</h3> <br>
+                <p>UI, aslında arayüz tasarımıdır. Televizyon kumandasının üstündeki tuşlar, bir arayüz tasarımı örneğidir. Tuşların yerleri, büyüklüğü, renkleri tasarımcının verdiği kararlar sonucu uygulanır. Arayüz tasarımının internet sitelerindeki karşılığı ise butonlar, grid yapısı, mizanpaj, renkler, boşluklar gibi tüm grafik elemanlardan oluşan görsel tasarımdır. Zamanla internet sitelerindeki interaksiyon arttıkça, önceleri çok da önemsenmeyen arayüz tasarımı da gittikçe önemli bir hal aldı. </p>
+                <br><p> Daha Fazla Bilgi İçin <a href="http://tasarlamag.com/ui-ve-ux-nedir/ " target="_blank" >Tıklayınız</a>.</p>
+        </div>
+        <div class="div" id="div">
+                <img src="images/design2.png" alt=""width="100%" height="100%">  <!-- fotograf link: https://www.google.com/search?q=laptop+and+human+icon&rlz=1C1SQJL_trTR869TR869&sxsrf=ACYBGNTbr8JacWDk4ZiMf0QE3QH2WEsN6w:1575232340471&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiSp97gpZXmAhVaw8QBHYubCmoQ_AUoAXoECAsQAw&biw=1366&bih=657#imgrc=CBJsyyxM_w22mM:-->        </div>
+        <div class="div" id="div2">
+                <h3>UI Design'i Nerede Kullandım?</h3><br>
+                <hr>
+                <p>Web Tasarım Dersi için verilmiş olan Kişisel web sitesi tasarımında yapmış olduğum projede kullanıcı arayüz tasarımını kullanarak ele aldım. Öncelikle olan takip etmiş olduğum youtube video eğitim serisinden yararlandım. Aslında bu yapmış olduğum projemde slider kısmında bootsrap kullandığım için web tasarım projemi şuan tekrardan yapmaktayım. Çünkü hocamız bootsrap kullanmamızı istememişti. Bende tecrübe olması için ilk başta yanda şekilde gösterildiği gibi projemi tasarladım. Projemin ayrıntılı sayfalarını aşağıda bulabilrsiniz.</p>
+                <br><p>YouTube Web Tasarım Eğitim Serisi İçin<a href="https://www.youtube.com/watch?v=oxiU6A8MEMM&list=PL78-uTxckQk6B0ZjgZlj9HVtzRZx888fm" target="_blank"> Tıklanıyız.</a></p>
+        </div>
+        <div class="div" id="div">
+            <img src="images/design3.png" alt=""width="100%" height="100%">  <!-- fotograf link: https://www.google.com/search?q=laptop+and+human+icon&rlz=1C1SQJL_trTR869TR869&sxsrf=ACYBGNTbr8JacWDk4ZiMf0QE3QH2WEsN6w:1575232340471&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiSp97gpZXmAhVaw8QBHYubCmoQ_AUoAXoECAsQAw&biw=1366&bih=657#imgrc=CBJsyyxM_w22mM:-->    </div>
+        <div class="div" id="div">
+            <img src="images/design4.png" alt=""width="100%" height="100%">  </div>
+        <div class="div" id="div">
+            <img src="images/design5.png" alt=""width="100%" height="100%">  </div>
+        <div class="div" id="div">
+            <img src="images/design7.png" alt=""width="100%" height="100%">  </div>
+        <div class="div" id="div">
+            <img src="images/design8.png" alt=""width="100%" height="100%">  </div>
+        <div class="div" id="div">
+            <img src="images/design9.png" alt=""width="100%" height="100%">  </div>
+        <div class="div" id="div">
+            <img src="images/design10.png" alt=""width="100%" height="100%">  </div>
+        <div class="div" id="div">
+            <img src="images/design11.png" alt=""width="100%" height="100%">  </div>
+        <div class="div" id="div">
+            <img src="images/design12.png" alt=""width="100%" height="100%">  </div>
+        <div class="div" id="div">
+            <img src="images/design13.png" alt=""width="100%" height="100%">  </div>
+        <div class="div" id="div">
+            <video width="100%" height="100%" controls src="images/design.mp4" controls autoplay src="images/design.mp4" controls muted autoplay src="/images/design.mp4">
+            
+        </div>
+        <div class="div" id="div2">
+            <h3>UI Design(Kullanıcı Tasarımcısı) Ne Yapar?</h3><br>
+            <hr>
+            <p>UI Design yani kullanıcı tasarımcısı ne yapar sorusunun cevabını yanda eklemiş olduğum videoda bulabilirsiniz. Kısaca bahsetmek gerekirse: UI tasarımcıları çizdiğiniz wireframe’leri, kurguladığınız akışları süsleyen, onları insanlara en iyi şekilde sunmaya çalışan insanlardır. Yani UX designer temeli atarken UI tasarımcısı incesini çeker, rötuşunu yapar. Çizilen wireframe’ler üzerinden hareketle nerede hangi rengin kullanılacağına, tipografiye, ikon seçimlerine, kurumsal kimliğe kısacası görsel manada tasarımı zenginleştirecek ne iş varsa her şeye UI tasarımcı bakar. Kimi zaman gerçekten de “logoyu bi’ tık büyütür”, “butonu azıcık sağa alıp text’i de beyaz mı yapsak” der. </p>        </div>
+            <br><a href="images/design.mp4" download target="_blank" class="button" style="margin-left:5%;"><span>Video İndir</span></a>
+        </div>
+    <!--#Ana Div Bitis-->
+<footer class="footer-burcu" style="margin-top: 5%;">
+    <div class="footer-left">
+        <h3>Basak Burcu<span>SOGUT</span></h3>
+        <p class="footer-links">
+        <a href="index.html">Ana Sayfa</a>
+        ·
+        <a href="hakkımda.html">Hakkımda</a>
+        ·
+        <a href="iletisim.html" target="_blank">İletişim</a>
+        </p>
+        <p class="footer-textburcu">© 2019 Tüm Hakları Saklıdır.</p>
+        </div>
+        <div class="footer-center">
+        <div>
+            <a href="https://www.google.com/maps/place/Kocaeli+%C3%9Cniversitesi+Umuttepe+Kamp%C3%BCs%C3%BC+B+Kap%C4%B1s%C4%B1/@40.8233561,29.9253451,15z/data=!4m5!3m4!1s0x0:0xdb29061ce8f77254!8m2!3d40.8233561!4d29.9253451" style="cursor: pointer;" target="_blank"><i class="fa fa-map-marker"></i></a>
+        <p><span>Umuttepe Kampüsü</span> Kocaeli, Türkiye</p>
+        </div>
+        <div>
+        <i class="fa fa-phone"></i>
+        <p>+0555 555 5050</p>
+        </div>
+        <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:basakburcusogut@gmail.com">basakburcusogut@gmail.com</a></p>
+        </div>
+        </div>
+        <div class="footer-right">
+        <p class="footer-basakhak1">
+        <span>Hakkımda</span>
+        Başak Burcu SÖGÜT 171307009 <br>
+        Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliği Bölümü 3.Sınıf</p>
+        <div class="footer-icons">
+        <a href="https://www.facebook.com/basakkburcuu" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://twitter.com/basakkkburcuuu" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UCuthM9l2SvTLiuFMCEerYJQ?view_as=subscriber" target="_blank"><i class="fab fa-youtube-square"></i></a>
+        <a href="https://www.linkedin.com/in/ba%C5%9Fak-burcu-s%C3%B6g%C3%BCt-95b611153/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/basakkburcuu/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+<div id="top">
+	<p style="text-align: center;"><img src="images/yukari.png" alt=""></p>  <!--iconun kaynağı: https://fontawesome.com/icons/arrow-circle-up?style=solid-->
+</div>
+</body>
+</html>

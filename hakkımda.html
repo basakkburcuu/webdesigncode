@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+<head> <!--responsive için-->
+	<meta http-equiv="content-type" content="text/html" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="author" content="basak burcu" />
+<meta charset="utf-8">
+<title> hakkımda</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/83a8699287.js" crossorigin="anonymous"></script>  
+<!--bu script netten alınmıştır: https://fontawesome.com/start-->
+<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"> <!--logom için bu script eklenmiştir. https://www.canerozgurel.com/4-adet-hazir-responsive-footer-tasarimi.html-->
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>  <!---yukarı çık kodu netten alınmıştır. Rapora kaynak konulmuştur: https://www.gencayyildiz.com/blog/jquery-ile-yukari-cik-buton-uygulamasi/-->
+	
+	<script type="text/javascript">
+        $(function () {
+            $("#top").click(function () {
+                // Sayfamızı kaydıracak olan kod burasıdır.
+                $("html,body").stop().animate({ scrollTop: "0" }, 1000);
+            });
+        });
+        $(window).scroll(function () {
+            var uzunluk = $(document).scrollTop();
+            if (uzunluk > 300) $("#top").fadeIn(500);
+            else { $("#top").fadeOut(500); }
+        });
+	</script>
+	<script> //responsive için
+		function toggle() {
+		 if (document.getElementById("nav-ul").style.display=="block"){
+		   document.getElementById("nav-ul").style.display=""
+			document.getElementById("nav-toggle-alt").style.display="none"
+		  }
+		 else{
+		  document.getElementById("nav-ul").style.display="block";
+		  document.getElementById("nav-toggle-alt").style.display="block"
+		 }
+		}
+		</script>
+		<style type="text/css">
+			* {box-sizing: border-box;}
+			body {font-family: Verdana, sans-serif;  color: black;}
+			    /*Hakkimda alani baslangic*/
+
+.cv {
+    margin: 5%;
+}
+
+.cv h1 {
+	text-align: center;
+    padding-bottom: 1%;
+    color: black;
+	font-family: 'ubuntu', sans-serif;
+	font-weight: 700;
+}
+
+.butonlar {
+    text-align: center;
+    padding: 2%;
+}
+
+#HTMLtoPDF {
+    margin-top: 3%;
+    margin: 0% 2%;
+	line-height: 20px;
+	margin-left: 10%;
+	display: inline-block;
+	box-shadow: 3px 3px 4px #000;
+}
+
+#HTMLtoPDF h2 {
+    padding-bottom: 0%;
+	line-height: 50px;
+	width:400px;
+	display: inline-block;
+	padding-left: 1%;
+	border-bottom: 2px solid #0080C0;
+	font-size: 25px;
+}
+
+#HTMLtoPDF .div3 {
+    margin: 10px 0%;
+}
+
+#HTMLtoPDF p {
+    padding-bottom: 10px;
+}
+
+h4{
+	padding-left: 1%;
+}
+
+.cvLeft {
+    display: inline;
+}
+
+
+
+/*Hakkimda alani bitis style*/
+		</style>
+</head>
+<body>
+<div id="header">
+	<div class="shell">
+		<!-- Logo -->
+		<h1 id="logo"><a href="index.html"> Web Tasarım Mekanım</a></h1>
+		<!-- /Logo -->
+	</div>
+	<div class="basak">
+		<h3>Basak Burcu <span>SOGUT &nbsp; &nbsp; &nbsp;           
+			<a href="https://www.facebook.com/basakkburcuu" target="_blank"><i class="fab fa-facebook-square"></i></a>
+			<a href="https://twitter.com/basakkkburcuuu" target="_blank"><i class="fab fa-twitter"></i></a>
+			<a href="https://www.instagram.com/basakkburcuu/" target="_blank"><i class="fab fa-instagram"></i></a>
+			</span>
+		</h3>
+	</div>
+</div>
+<!---menu-->
+<header>
+	<nav>
+	<div id="nav-toggle" onclick="toggle()">Menü</div>
+	<ul id="nav-ul">
+	<li><a href="index.html">Anasayfa <i class="fas fa-house-damage"></i></a>   <!---iconları aldığım kaynak: https://fontawesome.com/start--></li>
+	<li><a href="hakkımda.html">Hakkımda <i class="fas fa-id-card-alt"></i></a></li>
+	<li><a href="egitim.html" >Eğitim Serüvenim <i class="fas fa-university"></i></a></li>
+	
+	<li class="dropdown">
+        <a href="#">Bu Zamana Kadar <i class="fas fa-arrow-down"></i></a>
+        <ul>
+        <li><a href="ilgi.html">Başarılarım</a></li>
+        <li><a href="gezi.html">Gezdiğim Yerler</a></li>
+        </ul>
+    </li>
+
+	<li class="dropdown">
+	<a href="#">Neler Yapıyorum?</a>
+	<ul>
+	<li><a href="admin.html" >Admin Paneli <i class="fas fa-user-lock"></i></a></li>
+	<li><a href="design.html" >UI Design <i class="fas fa-crop-alt"></i></a></li>
+	<li><a href="html,css.html">HTML,CSS <i class="far fa-file-code"></i></a></li>
+	<li><a href="js.html">JS <i class="fab fa-node-js"></i></a></li>
+	</ul>
+	</li>
+	<!-- #sub menu -->
+	<li class="dropdown">
+	<a href="#">Bilgi Deposu</a>
+	<ul>
+	<li><a href="algoritma.html">Algoritma Mantığı</a></li>
+	<li><a href="programlama.html">Programlama Dilleri</a></li>
+	<li><a href="veri.html">Veri Tabanı</a></li>
+	<li><a href="angular.html">JS Framework</a></li>
+	</ul>
+	</li>
+	<!-- #sub menu -->
+	<li class="dropdown">
+	<a href="#">Blogdan Postlar</a>
+	<ul>
+	<li><a href="dijital.html">Dijital Pazarlama</a></li>
+	<li><a href="sistem.html">Sistem Uzmanlığı</a></li>
+	</ul>
+	</li>
+	<li><a href="iletisim.html" >İletişim <i class="fas fa-address-card"></i></a></li>
+	</ul>
+	<div id="nav-toggle-alt" onclick="toggle()">X</div>
+	</nav>
+	</header>
+	<!--menu bitis-->
+<!--#Ana Div Baslangic-->
+<div class="clear"></div>
+        <div class="cv">
+            <h1>Özgeçmişim</h1>  <!--bu kod alanı netten alinmistir. : http://www.yunusbassahan.com/blog/html5/html5-contenteditable-kullanimi.html-->
+            <div id="HTMLtoPDF" contenteditable="false">
+				<h2> Kisisel Bilgiler</h2><br>
+                <div class="div3"> <br>
+                    <div class="cvLeft">
+                        <h4>Adi Soyadi :&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; BASAK BURCU SOGUT</h4>
+                    </div> <br>
+                </div>
+                <div class="div3"> 
+                    <div class="cvLeft">
+                        <h4>Dogum Tarihi : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;08/05/1999</h4>
+                    </div> <br>
+                </div>
+                <div class="div3">
+                    <div class="cvLeft">
+                        <h4>Dogum Yeri :&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nevsehir</h4>
+                    </div> <br>
+                </div>
+                <div class="div3">
+                    <div class="cvLeft">
+                        <h4>Medeni Durumu :&nbsp; Bekar</h4>
+                    </div> <br>
+				</div>
+
+                <h2>Iletisim Bilgileri</h2>
+				<div class="div3"><br>
+                    <div class="cvLeft">
+                        <h4>Adres : &nbsp;&nbsp;&nbsp; Kabaoglu, Kocaeli Universitesi Umuttepe Kampüsü C Kapısı, 41000 Kabaoglu Koyu/Izmit/Kocaeli</h4>
+                    </div> <br>
+				</div>
+
+				<div class="div3">
+                    <div class="cvLeft">
+                        <h4>Telefon :&nbsp;&nbsp; 0555 555 50 50</h4>
+                    </div> <br>
+				</div>
+
+				<div class="div3">
+                    <div class="cvLeft">
+                        <h4>E-Posta :&nbsp; basakburcusogut@gmail.com</h4>
+                    </div> <br>
+				</div> 
+
+                <h2>Egitim Bilgileri</h2>
+                <div class="div3"><br>
+                    <div class="cvLeft">
+                        <h4>Universite :  &nbsp;&nbsp;Kocaeli Universitesi - Bilisim Sistemleri Muhendisligi</h4>
+                    </div><br>
+                </div>
+                <div class="div3">
+                    <div class="cvLeft">
+                        <h4>Lise :  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Avanos Anadolu Lisesi</h4>
+                    </div><br>
+                </div>
+
+                <h2>Is Deneyimi</h2>
+                <div class="div3"><br>
+                    <div class="cvLeft">
+                        <h4>Temmuz-Agustos 2018  &nbsp;&nbsp;Denizbank Stajyer <br>
+							• Kullanilan Sistemin Ogrenilmesi <br>
+							• Müsteri Destek Elemani</h4>
+                    </div><br>
+                </div>
+                <div class="div3"><br>
+                    <div class="cvLeft">
+                        <h4>Temmuz-Agustos 2019  &nbsp;&nbsp;PTT Genel Merkezi Stajyer <br>
+							• KPAPG Programinin Kullanilmasi <br>
+							• Arac Takip Sisteminin Denetimi</h4>
+                    </div><br>
+				</div>
+				<div class="div3"><br>
+                    <div class="cvLeft">
+						<h4>Kasım 2019-Halen  &nbsp;&nbsp;Kocaeli Üniversitesi Asistan <br>
+							• Uzaktan Egitim ve Arastirma Merkezi 
+						</h4>
+                    </div><br>
+				</div>
+				
+                <h2>Yabanci Dil</h2>
+                <div class="div3"><br>
+                    <div class="cvLeft">
+                        <h4>Ingilizce : &nbsp; Yazma/Konusma (B1 seviye) &nbsp;&nbsp; Almanca : &nbsp; Yazma/Konusma (A2 seviye)</h4>
+					</div> <br>
+                </div>
+				
+				<h2>Yetkinlikler</h2>
+                <div class="div3"> <br>
+                    <div class="cvLeft">
+                        <h4>Bilgisayar: &nbsp; Microsoft Office (Word, Excel, Powerpoint), MySQL, Oracle ,Asp.Net, C, C++, C#</h4>
+                    </div>
+                </div>
+                <div class="div3">
+                    <div class="cvLeft">
+                        <h4>Sertifikalar: &nbsp; <br> <br>
+							Egitim Adı: Finans ve Muhasebe Egitimi (Istanbul Isletme Enstitusu)<br>
+							Tarih: 29.04.2018 <br>
+							Not: 70 <br>
+							Sonuc: Basarılı <br>
+							Sertifika Kodu: 290480410120</h4> <br><br>
+						<h4>Egitim Adı: Bordro Uygulamaları Egitimi (Istanbul Isletme Enstitusu)<br>
+							Tarih: 15.04.2018 <br>
+							Not: 70 <br>
+							Sonus: Basarılı <br>
+							Sertifika Kodu: 150480310038</h4>	
+                    </div>
+				</div>
+				<h2>Diger</h2> <br>
+                <div class="div3">
+                    <div class="cvLeft"> <br>
+						<h4>Hobiler: &nbsp; Futbol, Volaybol, Masa Tenisi Oynamak <br>
+							Yeni yerler gezmek, müzik dinlemek <br><br>
+							Sigara: Kullanmıyorum
+						</h4>	
+                    </div>
+                </div>
+            </div> <br><br><br>
+            <div class="butonlar">
+                <button class="btn-contact" onclick="HTMLtoPDF()">PDF İndir</button> <br><br>
+                <button class="btn-contact" id="editButton" onclick="Edit()">Duzenle</button>
+			</div>
+
+        </div>
+        <script src="js/about-edit.js"></script>
+
+        <!--https://www.youtube.com/watch?v=_EqYMNdbrsc'dan alıntı-->
+        <script src="js/jspdf.js"></script>
+        <script src="js/jquery-2.1.3.js"></script>
+        <script src="js/pdfFromHTML.js"></script>
+        <!--https://www.youtube.com/watch?v=_EqYMNdbrsc'dan alıntı-->
+
+
+        <div class="clear"></div>
+<!--footer baslangıc-->
+<footer class="footer-burcu" style="margin-top: 5%;">
+	<div class="footer-left">
+		<h3>Basak Burcu<span>SOGUT</span></h3>
+		<p class="footer-links">
+		<a href="index.html">Ana Sayfa</a>
+		·
+		<a href="hakkımda.html">Hakkımda</a>
+		·
+		<a href="iletisim.html" target="_blank">İletişim</a>
+		</p>
+		<p class="footer-textburcu">© 2019 Tüm Hakları Saklıdır.</p>
+		</div>
+		<div class="footer-center">
+		<div>
+			<a href="https://www.google.com/maps/place/Kocaeli+%C3%9Cniversitesi+Umuttepe+Kamp%C3%BCs%C3%BC+B+Kap%C4%B1s%C4%B1/@40.8233561,29.9253451,15z/data=!4m5!3m4!1s0x0:0xdb29061ce8f77254!8m2!3d40.8233561!4d29.9253451" style="cursor: pointer;" target="_blank"><i class="fa fa-map-marker"></i></a>
+		<p><span>Umuttepe Kampüsü</span> Kocaeli, Türkiye</p>
+		</div>
+		<div>
+		<i class="fa fa-phone"></i>
+		<p>+0555 555 5050</p>
+		</div>
+		<div>
+		<i class="fa fa-envelope"></i>
+		<p><a href="mailto:basakburcusogut@gmail.com">basakburcusogut@gmail.com</a></p>
+		</div>
+		</div>
+		<div class="footer-right">
+		<p class="footer-basakhak1">
+		<span>Hakkımda</span>
+		Başak Burcu SÖGÜT 171307009 <br>
+		Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliği Bölümü 3.Sınıf</p>
+		<div class="footer-icons">
+		<a href="https://www.facebook.com/basakkburcuu" target="_blank"><i class="fab fa-facebook-square"></i></a>
+		<a href="https://twitter.com/basakkkburcuuu" target="_blank"><i class="fab fa-twitter"></i></a>
+		<a href="https://www.youtube.com/channel/UCuthM9l2SvTLiuFMCEerYJQ?view_as=subscriber" target="_blank"><i class="fab fa-youtube-square"></i></a>
+		<a href="https://www.linkedin.com/in/ba%C5%9Fak-burcu-s%C3%B6g%C3%BCt-95b611153/" target="_blank"><i class="fab fa-linkedin"></i></a>
+		<a href="https://www.instagram.com/basakkburcuu/" target="_blank"><i class="fab fa-instagram"></i></a>
+		</div>
+</div>
+</footer>
+<div id="top">
+	<p style="text-align: center;"><img src="images/yukari.png" alt=""></p>  <!--iconun kaynağı: https://fontawesome.com/icons/arrow-circle-up?style=solid-->
+</div>
+</body>
+</html>
+

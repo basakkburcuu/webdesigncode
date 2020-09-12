@@ -1,0 +1,366 @@
+<!doctype html>
+<html>
+<head> <!--responsive için-->
+	<meta http-equiv="content-type" content="text/html" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="author" content="basak burcu" />
+<meta charset="utf-8">
+<title>angular</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/83a8699287.js" crossorigin="anonymous"></script>  
+<!--bu script netten alınmıştır: https://fontawesome.com/start-->
+<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"><!--logom için bu script eklenmiştir. https://www.canerozgurel.com/4-adet-hazir-responsive-footer-tasarimi.html-->
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>  <!---yukarı çık kodu netten alınmıştır. Rapora kaynak konulmuştur: https://www.gencayyildiz.com/blog/jquery-ile-yukari-cik-buton-uygulamasi/-->
+    <script type="text/javascript">
+        $(function () {
+            $("#top").click(function () {
+                // Sayfamızı kaydıracak olan kod burasıdır.
+                $("html,body").stop().animate({ scrollTop: "0" }, 1000);
+            });
+        });
+        $(window).scroll(function () {
+            var uzunluk = $(document).scrollTop();
+            if (uzunluk > 300) $("#top").fadeIn(500);
+            else { $("#top").fadeOut(500); }
+        });
+    </script>
+    	<script> //responsive için
+            function toggle() {
+             if (document.getElementById("nav-ul").style.display=="block"){
+               document.getElementById("nav-ul").style.display=""
+                document.getElementById("nav-toggle-alt").style.display="none"
+              }
+             else{
+              document.getElementById("nav-ul").style.display="block";
+              document.getElementById("nav-toggle-alt").style.display="block"
+             }
+            }
+            </script>
+<style type="text/css">
+* {box-sizing: border-box;}
+	body {font-family: Verdana, sans-serif;}
+</style>
+</head>
+<body>
+        <div id="header">
+            <div class="shell">
+                <!-- Logo -->
+                <h1 id="logo"><a href="index.html"> Web Tasarım Mekanım</a></h1>
+                <!-- /Logo -->
+            </div>
+            <div class="basak">
+                <h3>Basak Burcu <span>SOGUT &nbsp; &nbsp; &nbsp;           
+                    <a href="https://www.facebook.com/basakkburcuu" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/basakkkburcuuu" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/basakkburcuu/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </span></h3>
+            </div>
+        </div>
+<!---menu-->
+<header>
+    <nav>
+    <div id="nav-toggle" onclick="toggle()">Menü</div>
+    <ul id="nav-ul">
+    <li><a href="index.html">Anasayfa <i class="fas fa-house-damage"></i></a>   <!---iconları aldığım kaynak: https://fontawesome.com/start--></li>
+    <li><a href="hakkımda.html">Hakkımda <i class="fas fa-id-card-alt"></i></a></li>
+    <li><a href="egitim.html" >Eğitim Serüvenim <i class="fas fa-university"></i></a></li>
+   
+    <li class="dropdown">
+        <a href="#">Bu Zamana Kadar <i class="fas fa-arrow-down"></i></a>
+        <ul>
+        <li><a href="ilgi.html">Başarılarım</a></li>
+        <li><a href="gezi.html">Gezdiğim Yerler</a></li>
+        </ul>
+    </li>
+
+    <li class="dropdown">
+    <a href="#">Neler Yapıyorum?</a>
+    <ul>
+    <li><a href="admin.html" >Admin Paneli <i class="fas fa-user-lock"></i></a></li>
+    <li><a href="design.html" >UI Design <i class="fas fa-crop-alt"></i></a></li>
+    <li><a href="html,css.html">HTML,CSS <i class="far fa-file-code"></i></a></li>
+    <li><a href="js.html">JS <i class="fab fa-node-js"></i></a></li>
+    </ul>
+    </li>
+    <!-- #sub menu -->
+    <li class="dropdown">
+    <a href="#">Bilgi Deposu</a>
+    <ul>
+    <li><a href="algoritma.html">Algoritma Mantığı</a></li>
+    <li><a href="programlama.html">Programlama Dilleri</a></li>
+    <li><a href="veri.html">Veri Tabanı</a></li>
+    <li><a href="angular.html">JS Framework</a></li>
+    </ul>
+    </li>
+    <!-- #sub menu -->
+    <li class="dropdown">
+    <a href="#">Blogdan Postlar</a>
+    <ul>
+    <li><a href="dijital.html">Dijital Pazarlama</a></li>
+    <li><a href="sistem.html">Sistem Uzmanlığı</a></li>
+    </ul>
+    </li>
+    <li><a href="iletisim.html" >İletişim <i class="fas fa-address-card"></i></a></li>
+    </ul>
+    <div id="nav-toggle-alt" onclick="toggle()">X</div>
+    </nav>
+    </header>
+    <!--menu bitis-->
+<!--#Ana Div Baslangic-->
+<div id="ana_div">
+    <h1>ANGULAR </h1>
+        <div class="div" id="div">
+                <img src="images/angular1.png"  width="100%" height="100%">
+        </div>
+        <div class="div" id="div2">
+                <h3>Angular Nedir?</h3> <br>
+                <p style="font-size: 15px;">Angular, web uygulamaları ve SPA’lar (tek sayfa uygulamaları) oluşturmak için en çok kullanılan JavaScript frameworklerinden biridir. Angular’ın önceki versiyonuna AngularJS adı verildi ve 2009 yılında Google tarafından geliştirildi ve piyasaya sunuldu. O zamandan beri uzun bir yol kat edildi ve pek çok kurumsal düzeyde web uygulamasını güçlendiren bir MIT lisanslı açık kaynak projesi olarak mevcut. </p s>
+                <br><a href="https://angular.io/" target="_blank" >Web Sitesine Ulaşmak İçin Tıklayınız.</a>
+                <br><a href="https://github.com/angular/angular" target="_blank" >GitHub'a Bağlanmak İçin Tıklayınız.</a>
+        </div>   
+        <div class="div" id="div2">
+                <h3>AngularJS Neden Kullanılmalı?</h3> <br>
+                <b style="color: #000; font-size: 20px;">1.Görsel işlemler olması gereken yerde</b><br>
+                <p style="font-size: 15px;">Bir tab arayüzü düşünelim. Tabların kulakçıklarına basıldıkça ilgili içeriğin gösterilip diğerlerinin gizlenmesi işi için jQuery’de kod yazmak, DOM’da gezinmek Javascript kodlarımızı HTML ve CSS ile gereğinden fazla içli dışlı yaptığı gibi, kodu büyütüp, geliştirilebilirliği de düşürüyor. Ancak bu işi Angular’da tamamen template üzerinde tamamlayabiliyoruz.</p>
+                <br><a href="https://angular.io/" target="_blank" > <button class="btn-contact">Ayrıntılı Bilgi İçin Tıklayınız.</button></a>        
+        </div> 
+        <div class="div" id="div">
+                <img src="images/angular2.png"  width="100%" height="100%">
+        </div>
+        <div class="div" id="div">
+                <img src="images/angular3.png"  width="100%" height="100%">
+        </div>
+        <div class="div" id="div2">
+                <h3>AngularJS Neden Kullanılmalı?</h3> <br>
+                <b style="color: #000; font-size: 20px;">2. HTML’i geliştirmenin en kolay yolu: directive’ler</b><br>
+                <br><p style="font-size: 15px;"> Directive adını verdikleri yapı sayesinde HTML’e yeni etiketker veya attribute’lar eklemek mümkün. Bu özellik çok önemli çünkü “web uygulamaları” geliştirmeye çalıştığımız bir dünyada “list item” etiketleriyle tablar, menüler, akordionlar, div’lerle dialog kutuları geliştirmek çok “çakma” kalıyor.</p>
+                <br><a href="https://angular.io/" target="_blank" > <button class="btn-contact">Ayrıntılı Bilgi İçin Tıklayınız.</button></a>  <br><br> <br><br>      
+        </div> 
+        <div class="div" id="div2">
+                <h3>AngularJS Neden Kullanılmalı?</h3> <br>
+                <b style="color: #000; font-size: 20px;">3. Az kod çok iş</b><br><br>
+                <p style="font-size: 15px;">“Write less do more” size tanıdık gelmiştir. Evet, jQuery’nin sloganı da bu ve hakikaten jQuery ile de az kod ile çok iş yapıyorsunuz. Ancak Angular’da DOM manipulasyonlarının büyük oranda template’lere taşınması ve javascript kodlarının işlevsel modüllere bölünmesi sayesinde, javascript dosyalarınız genelde 40-50 satırı geçmiyor.</p>
+                <br><a href="https://angular.io/" target="_blank" > <button class="btn-contact">Ayrıntılı Bilgi İçin Tıklayınız.</button></a> <br><br>   
+        </div> 
+        <div class="div" id="div">
+                <img src="images/angular4.png"  width="100%" height="100%">
+        </div>
+        <h1>METEOR </h1>
+        <div class="div" id="div">
+                <img src="images/meteor.png"  width="100%" height="100%">
+        </div>
+        <div class="div" id="div2">
+                <h3>Meteor Nedir?</h3> <br>
+                <p style="font-size: 15px;">JavaScript üzerinde çalışırken projelerinizi en hızlı şekilde oluşturmanın yolu Meteor’dan geçer. Bünyesinde var olan bir JavaScript yığınıyla daha az kod kullanarak daha fazlasını yapabilmenizi sağlar ve zaman tasarrufu kazandırır. Ayrıca diğer JavaScript frameworkleri ile kolaylıkla entegre olabiliyorken aynı zamanda masaüstü ve mobil cihazlarla harika bir şekilde çalışabilir. </p>
+                <br><a href="https://www.meteor.com/" target="_blank" >Web Sitesine Ulaşmak İçin Tıklayınız.</a>
+                <br><a href="https://github.com/meteor/meteor" target="_blank" >GitHub'a Bağlanmak İçin Tıklayınız.</a>
+        </div>   
+        <div class="div" id="div2">
+                <h3>Meteor Js Öğrenmek Mi İstiyorsunuz?</h3> <br>
+                <p style="font-size: 15px;">Ekrana eklemiş olduğum videoda meteor nedir?, nerelerde kullanılır? gibi basit bir biçimde meteora giriş yapılmaktadır. YouTube'den almış olduğum bu video serisinde aşağıya bırakmış olduğum linkten erişebilir ve öğrenmek için ilk adımı atabilirsiniz!</p>
+                <br><a href="https://www.youtube.com/redirect?v=biQD7N_OkKk&event=video_description&redir_token=CSgBCqDPD9Z69YhIpnihwvyxFNB8MTU3NTg5NTUwMUAxNTc1ODA5MTAx&q=http%3A%2F%2Fmeteorjsdersleri.surge.sh" target="_blank" > <button class="btn-contact">Derslere Ulaşmak İçin </button></a> <br><br><br>       
+        </div> 
+        <div class="div" id="div">
+            <video width="100%" height="100%" controls src="images/meteor.mp4" controls autoplay src="images/meteor.mp4" controls muted autoplay src="/images/meteor.mp4">
+        </div>
+        <div style="margin-left: 65%;">   
+                <a href="images/meteor.mp4" download target="_blank" class="button"><span>Video İndir</span></a>
+            </div>
+        <div class="div" id="div">
+                <img src="images/meteor3.png" width="100%" height="100%">
+            </div>
+        <div class="div" id="div2">
+                <h3>Meteor.js Neden Kullanılmalıdır?</h3> <br>
+                <br><p style="font-size: 15px;">1.Diğer web frameworklar gibi sadece tek bir platforma yönelmiş değiller. Aynı anda hem Bilgisayar – Mobil web uygulamaları geliştirmenizi sağlıyorlar. İonic platform ile entegreli oldukları için Android ve İos uygulamalarınızda çok kolay bir şekilde entegre edebiliyorsunuz.</p><br><br> 
+        </div> 
+       
+            <div class="div" id="div">
+                    <p style="font-size: 15px;">2.Geliştiricileri Meteor.js ‘nin diğer web frameworklara göre öğrenmesinin daha kolay olduğunu savunuyorlar.</p><br>
+                    <p style="font-size: 15px;">3.Typescript ile size eş zamanlı uygulama geliştirme imkanı sağlar. Yani uygulamada değiştirdiğiniz bölümü F5 yapmadan görebilirsiniz.</p>
+                    <br><a href="https://www.emrekarakaya.com.tr/meteor-js-nedir-neden-kullanilmali/" target="_blank" > <button class="btn-contact">Ayrıntılı Bilgi İçin Tıklayınız.</button></a>  <br><br> <br>
+                </div>
+        <div class="div" id="div" style="height: 100%">
+            <img src="images/meteor2.png"  width="100%" height="100%">
+        </div>
+        <h1>REACT </h1>
+        <div class="div" id="div">
+                <img src="images/react1.png" alt="university of cambridge, cambridge, uk" width="100%" height="100%">
+        </div>
+        <div class="div" id="div2">
+                <h3>React Nedir?</h3> <br>
+                <p style="font-size: 15px;">Facebook tarafından inşa edilen React, hızla popülarite kazanmış ve en hızlı büyüyen JavaScript frameworkü haline geldi. Reakt, Facebook’un ve Instagram’ın kullanıcı arayüzlerine güç verir ve bu nedenle, yüksek performans gösteren kurumsal uygulamalar için uygundur. </p>
+                <br><a href="https://facebook.github.io/react/" target="_blank" >Web Sitesine Ulaşmak İçin Tıklayınız.</a><br>
+                <br><a href="https://github.com/facebook/react" target="_blank" >GitHub'a Bağlanmak İçin Tıklayınız.</a><br><br><br><br>
+        </div>   
+        <div class="div" id="div2">
+                <h3>Neden React'i Kullanmalısınız?</h3> <br>
+                <b style="color: #000; font-size: 20px;">1.Kullanımı Kolay</b><br><br>
+                <p style="font-size: 15px;">Açık kaynaklı bir JavaScript GUI kütüphanesi olan React’in en büyük odak noktası vardır; UI görevlerini verimli bir şekilde tamamlamaktır. MVC kalıbındaki (Model-View-Controller – Model Görünüm Kontrolcüsü) “V” olarak sınıflandırılabilir.
+                <br><br><a href="https://www.hostinger.web.tr/rehberler/react-nedir/" target="_blank" > <button class="btn-contact">Ayrıntılı Bilgi İçin Tıklayınız.</button></a><br><br>      
+        </div> 
+        <div class="div" id="div">
+                <img src="images/react2.png" alt="university of cambridge, cambridge, uk" width="100%" height="100%">
+        <br><br><br><br><br></div>
+        <div class="div" id="div">
+                <img src="images/react3.png" alt="university of cambridge, cambridge, uk" width="100%" height="100%"><br><br><br><br>
+        </div>
+        <div class="div" id="div2">
+                <h3>Neden React'i Kullanmalısınız? </h3> <br>
+                <b style="color: #000; font-size: 20px;">2.Sanal DOM ile Daha İyi Performans</b><br>
+                <br><p style="font-size: 15px;">React DOM (Document Object Model – Belge Nesne Modeli) işlemini verimli biçimde güncelleyecektir. Tahmin edebileceğiniz gibi bu işlem web bazlı uygulamalarda birçok sorun çıkartabilir. Şanslısınız ki React sanal DOM’lar kullanır, böylece bu sorunu yaşamanıza gerek kalmaz.</p>
+                <br><a href="https://www.hostinger.web.tr/rehberler/react-nedir/" target="_blank" > <button class="btn-contact">Ayrıntılı Bilgi İçin Tıklayınız.</button></a>  <br><br> <br><br>      
+        </div> 
+        <div class="div" id="div2">
+                <h3>Neden React'i Kullanmalısınız?</h3> <br>
+                <b style="color: #000; font-size: 20px;">3.SEO Dostu</b><br><br>
+                <p style="font-size: 15px;">React çeşitli arama motorlarında erişilebilen bir kullanıcı arayüzü oluşturmanıza izin verir. Bu özellik çok avantajlıdır çünkü bütün JavaScript frameworkleri SEO dostu değildir.
+                 Üstelik, React’in uygulama sürecini hızlandırabileceğinden SEO sıralamalarınızı da yükseltebilir. Ne de olsa SEO optimizasyonunda web site hızının rolü çok önemlidir.</p>
+                <br><a href="https://www.hostinger.web.tr/rehberler/react-nedir/" target="_blank" > <button class="btn-contact">Ayrıntılı Bilgi İçin Tıklayınız.</button></a> <br><br>   
+        </div> 
+        <div class="div" id="div">
+                <img src="images/react4.png" width="100%" height="100%">
+        </div>
+        <div class="div" id="div">
+            <img src="images/react5.png" width="100%" height="100%">
+        </div>
+        <div class="div" id="div2">
+            <h3>Peki React Öğrenmeli miyim?</h3> <br>
+            <p style="font-size: 15px;">Buna şahsen cevabım, eğer ki web programlama dünyasında iseniz React’ı öğrenerek, programlama hayatınıza yeni bir soluk getirmiş olursunuz. Eğer mobil uygulamalar üzerinde çalışıyorsanız yine yolunuzu React ile kesiştirin ama bu sefer Native olanı ile. React Native ile hemen hemen aynı yapıyı kullanarak javascript ile mobil bir uygulama yazabilirsiniz. Kısacası öğrendikten sonra pişman olmayacağınız bir yapıdır, React.</p>
+            <br><a href="https://www.mediaclick.com.tr/blog/react-js-nedir" target="_blank" > <button class="btn-contact">Ayrıntılı Bilgi İçin Tıklayınız.</button></a> <br><br>   
+        </div>
+        <div class="div" id="div2">
+            <h3>React Mi Öğrenmek İstiyorsunuz?</h3> <br>
+            <p style="font-size: 15px;">Yandaki videoda react frameworküne giriş manasında hazırlanmış olan video bulunmaktadır. Bu eğitim serinin videolarına ulaşmak için aşağıdaki bağlantıya tıklamınız yeterli olacaktır.
+            <br> İyi Seyirler! </p><br><br><br><br>
+        </div> 
+        <div class="div" id="div">
+            <video width="100%" height="100%" controls src="images/react.mp4" controls autoplay src="images/react.mp4" controls muted autoplay src="/images/react.mp4">   
+        </div>
+        <div style="margin-left: 65%;">   
+            <a href="images/react.mp4" download target="_blank" class="button"><span>Video İndir</span></a>
+        </div>
+        <h1>AURELİA</h1>
+        <div class="div" id="div">
+                <img src="images/aurelia1.png"  width="100%" height="100%">
+        </div>
+        <div class="div" id="div2">
+                <h3>Aurelia Nedir?</h3> <br>
+                <p style="font-size: 15px;">Aurelia, mobil, masaüstü ve web için popüler bir JavaScript istemci frameworküdür. Aurelia, iki yönlü veri bağlama sunar ve ES5, ES 2015, ES 2016 ve TypeScript gibi farklı JavaScript lezzetlerini destekler.
+                Aurelia, monolitik çerçeve yaklaşımını yerine, daha küçük, odaklanmış modüllerden oluşur. Aurelia, kodu test etmeyi kolaylaştırır ve yaratıcılarından ticari destek sağlar.</p>
+                <br><a href="http://aurelia.io/" target="_blank" >Web Sitesine Ulaşmak İçin Tıklayınız.</a>
+                <br><br><a href="https://github.com/aurelia/framework" target="_blank" >GitHub'a Bağlanmak İçin Tıklayınız.</a><br><br>
+        </div>   
+        <div class="div" id="div2">
+                <h3>Modern Mimarisi</h3> <br>
+                <p style="font-size: 15px;">Aurelia, monolitik frameworkleri takip etmek yerine modüler bir yapıya odaklanmış durumda. Bu da Aurelia’yı tam teşekküllü( 😀 ) bir framework olarak kullanmanıza imkan tanıdığı gibi ihtiyacınız kadar componenti kullanmanıza da imkan tanır bir hale getiriyor.</p>
+                <br><a href="https://aligoren.com/aurelia-framework/" target="_blank" > <button class="btn-contact">Ayrıntılı Bilgi İçin Tıklayınız.</button></a> <br><br><br><br> <br>   <br> <br>     
+        </div> 
+        <div class="div" id="div">
+                <img src="images/aurelia2.jpg" width="100%" height="100%">
+        </div>
+        <div class="div" id="div">
+                <img src="images/aurelia3.png" width="100%" height="100%">
+        </div>
+        <div class="div" id="div2">
+                <h3>Çift Yönlü Data Bind</h3> <br>
+                <br><p style="font-size: 15px;"> Aslında sitede two-way data binding olarak geçiyor da dilimize nasıl aktaracağımı bilemedim. Angular kullananlar da biliyorlardır muhtemelen. Sayfada ya da model tarafında yapılan bir değişiklik, diğerinde de görünür hale geliyor. Yani bunun için gidip ekstra kod da yazmıyorsunuz.</pstyle="font-size: 15px;">
+                <br><a href="https://aligoren.com/aurelia-framework/" target="_blank" > <button class="btn-contact">Ayrıntılı Bilgi İçin Tıklayınız.</button></a>  <br><br> <br><br><br> <br> <br> <br>       
+        </div> 
+        <h1>EMBER</h1>
+        <div class="div" id="div">
+                <img src="images/ember1.png"  width="100%" height="100%">
+        </div>
+        <div class="div" id="div2">
+                <h3>Ember Nedir?</h3> <br>
+                <p style="font-size: 15px;">Ember, öğrenmesi kolay ve iyi bir topluluk desteğine sahip, düşünceli bir JavaScript frameworküdür. Ember, kendisini iddialı web uygulamaları oluşturmak için bir framework olarak tanımlıyor ve veri değişiklikleri üzerine otomatik olarak güncellenen Handlebars tabanlı şablonlara sahip.</p>
+                <br><a href="https://www.emberjs.com/" target="_blank" >Web Sitesine Ulaşmak İçin Tıklayınız.</a><br>
+                <br><a href="https://github.com/emberjs/ember.js" target="_blank" >GitHub'a Bağlanmak İçin Tıklayınız.</a><br><br><br>
+        </div>   
+        <div class="div" id="div2">
+                <h3>Glimmer nedir? Bunu da öğrenmem gerekiyor mu?</h3> <br>
+                <p style="font-size: 15px;">Glimmer, Ember'de kullanılan bir oluşturma motorudur. Bununla birlikte, Ember uygulamaları oluşturmak için Glimmer hakkında süper hızlı bir şey dışında hiçbir şey bilmenize gerek yok ve çekirdek kod temeli için katkıda bulunanların bu konuda bilgi vermeyi sevdiğini biliyorsunuz. Hepsi perde arkasında. Glimmer projesinin Ember'in gelişimi için yol haritasına nasıl uyduğunu merak ediyorsanız:</p>
+                <br><a href="https://discuss.emberjs.com/t/readers-questions-will-breaking-up-ember-remove-the-need-for-glimmer-js/14325" target="_blank" > <button class="btn-contact">Ayrıntılı Bilgi İçin Tıklayınız.</button></a>        
+        </div> 
+        <div class="div" id="div">
+                <img src="images/ember2.png" width="100%" height="100%"><br><br><br>
+        </div>
+
+        <br><br><h3 style="text-align: center;">Ember.js'i Kimler Kullanıyor?</h3> <br>
+
+        <div class="div" id="div2">
+                <div class="div" id="div">
+                    <a href="https://www.microsoft.com/"><img src="images/ember3.png"  width="100%" height="100%"></a>
+                </div>
+                <div class="div" id="div">
+                    <a href="https://www.intercom.com/"><img src="images/ember4.png"  width="100%" height="100%"></a>
+                </div>
+                <div class="div" id="div">
+                    <a href="https://www.netflix.com/"><img src="images/ember5.png"  width="100%" height="100%"></a>
+                </div>
+                <div class="div" id="div">
+                    <a href="https://www.heroku.com/"><img src="images/ember6.png"  width="100%" height="100%"></a>
+                </div>
+        </div> 
+        
+        <div class="div" id="div2">
+                <div class="div" id="div">
+                    <a href="https://www.skylight.io/"><img src="images/ember7.png" width="100%" height="100%"></a>
+                </div>
+                <div class="div" id="div">
+                    <a href="https://www.linkedin.com/"><img src="images/ember8.png" width="100%" height="100%"></a>
+                </div>
+                <div class="div" id="div">
+                    <a href="https://www.square.com/"><img src="images/ember9.png" width="100%" height="100%"></a>
+                </div>
+                <div class="div" id="div">
+                    <a href="https://www.zendesk.com/"><img src="images/ember10.png" width="100%" height="100%"></a>
+                </div>
+        </div> 
+</div>
+    <!--#Ana Div Bitis-->
+<footer class="footer-burcu" style="margin-top: 3%;">
+    <div class="footer-left">
+        <h3>Basak Burcu<span>SOGUT</span></h3>
+        <p class="footer-links">
+        <a href="index.html">Ana Sayfa</a>
+        ·
+        <a href="hakkımda.html">Hakkımda</a>
+        ·
+        <a href="iletisim.html" target="_blank">İletişim</a>
+        </p>
+        <p class="footer-textburcu">© 2019 Tüm Hakları Saklıdır.</p>
+        </div>
+        <div class="footer-center">
+        <div>
+            <a href="https://www.google.com/maps/place/Kocaeli+%C3%9Cniversitesi+Umuttepe+Kamp%C3%BCs%C3%BC+B+Kap%C4%B1s%C4%B1/@40.8233561,29.9253451,15z/data=!4m5!3m4!1s0x0:0xdb29061ce8f77254!8m2!3d40.8233561!4d29.9253451" style="cursor: pointer;" target="_blank"><i class="fa fa-map-marker"></i></a>
+        <p><span>Umuttepe Kampüsü</span> Kocaeli, Türkiye</p>
+        </div>
+        <div>
+        <i class="fa fa-phone"></i>
+        <p>+0555 555 5050</p>
+        </div>
+        <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:basakburcusogut@gmail.com">basakburcusogut@gmail.com</a></p>
+        </div>
+        </div>
+        <div class="footer-right">
+        <p class="footer-basakhak1">
+        <span>Hakkımda</span>
+        Başak Burcu SÖGÜT 171307009 <br>
+        Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliği Bölümü 3.Sınıf</p>
+        <div class="footer-icons">
+        <a href="https://www.facebook.com/basakkburcuu" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://twitter.com/basakkkburcuuu" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UCuthM9l2SvTLiuFMCEerYJQ?view_as=subscriber" target="_blank"><i class="fab fa-youtube-square"></i></a>
+        <a href="https://www.linkedin.com/in/ba%C5%9Fak-burcu-s%C3%B6g%C3%BCt-95b611153/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/basakkburcuu/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+<div id="top">
+	<p style="text-align: center;"><img src="images/yukari.png" alt=""></p>  <!--iconun kaynağı: https://fontawesome.com/icons/arrow-circle-up?style=solid-->
+</div>
+</body>
+</html>

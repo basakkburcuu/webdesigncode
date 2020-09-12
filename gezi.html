@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+	<!--responsive için-->
+	<meta http-equiv="content-type" content="text/html" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="author" content="basak burcu" />
+<meta charset="utf-8">
+<title>gezi</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/83a8699287.js" crossorigin="anonymous"></script>  
+<!--bu script netten alınmıştır: https://fontawesome.com/start-->
+<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"><!--logom için bu script eklenmiştir. https://www.canerozgurel.com/4-adet-hazir-responsive-footer-tasarimi.html-->
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>  <!---yukarı çık kodu netten alınmıştır. Rapora kaynak konulmuştur: https://www.gencayyildiz.com/blog/jquery-ile-yukari-cik-buton-uygulamasi/-->
+<!--Bu script slider yapımı için amazing slider free programının yapmış olduğu kod parçacığıdır.-->
+<script src="sliderengine/jquery.js"></script>
+<script src="sliderengine/amazingslider.js"></script>
+<link rel="stylesheet" type="text/css" href="sliderengine/amazingslider-1.css">
+<script src="sliderengine/initslider-1.js"></script>	
+	<script type="text/javascript">
+        $(function () {
+            $("#top").click(function () {
+                // Sayfamızı kaydıracak olan kod burasıdır.
+                $("html,body").stop().animate({ scrollTop: "0" }, 1000);
+            });
+        });
+        $(window).scroll(function () {
+            var uzunluk = $(document).scrollTop();
+            if (uzunluk > 300) $("#top").fadeIn(500);
+            else { $("#top").fadeOut(500); }
+        });
+	</script>
+<script> //responsive için
+	function toggle() {
+	 if (document.getElementById("nav-ul").style.display=="block"){
+	   document.getElementById("nav-ul").style.display=""
+		document.getElementById("nav-toggle-alt").style.display="none"
+	  }
+	 else{
+	  document.getElementById("nav-ul").style.display="block";
+	  document.getElementById("nav-toggle-alt").style.display="block"
+	 }
+	}
+	</script>
+<style type="text/css" >
+	* {box-sizing: border-box;}
+}
+	</style>
+</head>
+<body>
+		<div id="header">
+			<div class="shell">
+				<!-- Logo -->
+				<h1 id="logo"><a href="index.html"> Web Tasarım Mekanım</a></h1>
+				<!-- /Logo -->
+			</div>
+			<div class="basak">
+				<h3>Basak Burcu <span>SOGUT &nbsp; &nbsp; &nbsp;           
+					<a href="https://www.facebook.com/basakkburcuu" target="_blank"><i class="fab fa-facebook-square"></i></a>
+					<a href="https://twitter.com/basakkkburcuuu" target="_blank"><i class="fab fa-twitter"></i></a>
+					<a href="https://www.instagram.com/basakkburcuu/" target="_blank"><i class="fab fa-instagram"></i></a>
+					</span></h3>
+			</div>
+		</div>
+<!---menu-->
+<header>
+	<nav>
+	<div id="nav-toggle" onclick="toggle()">Menü</div>
+	<ul id="nav-ul">
+	<li><a href="index.html">Anasayfa <i class="fas fa-house-damage"></i></a>   <!---iconları aldığım kaynak: https://fontawesome.com/start--></li>
+	<li><a href="hakkımda.html">Hakkımda <i class="fas fa-id-card-alt"></i></a></li>
+	<li><a href="egitim.html" >Eğitim Serüvenim <i class="fas fa-university"></i></a></li>
+	
+	<li class="dropdown">
+        <a href="#">Bu Zamana Kadar <i class="fas fa-arrow-down"></i></a>
+        <ul>
+        <li><a href="ilgi.html">Başarılarım</a></li>
+        <li><a href="gezi.html">Gezdiğim Yerler</a></li>
+        </ul>
+    </li>
+
+	<li class="dropdown">
+	<a href="#">Neler Yapıyorum?</a>
+	<ul>
+	<li><a href="admin.html" >Admin Paneli <i class="fas fa-user-lock"></i></a></li>
+	<li><a href="design.html" >UI Design <i class="fas fa-crop-alt"></i></a></li>
+	<li><a href="html,css.html">HTML,CSS <i class="far fa-file-code"></i></a></li>
+	<li><a href="js.html">JS <i class="fab fa-node-js"></i></a></li>
+	</ul>
+	</li>
+	<!-- #sub menu -->
+	<li class="dropdown">
+	<a href="#">Bilgi Deposu</a>
+	<ul>
+	<li><a href="algoritma.html">Algoritma Mantığı</a></li>
+	<li><a href="programlama.html">Programlama Dilleri</a></li>
+	<li><a href="veri.html">Veri Tabanı</a></li>
+	<li><a href="angular.html">JS Framework</a></li>
+	</ul>
+	</li>
+	
+	<li class="dropdown">
+	<a href="#">Blogdan Postlar</a>
+	<ul>
+	<li><a href="dijital.html">Dijital Pazarlama</a></li>
+	<li><a href="sistem.html">Sistem Uzmanlığı</a></li>
+	</ul>
+	</li>
+	<li><a href="iletisim.html" >İletişim <i class="fas fa-address-card"></i></a></li>
+	</ul>
+	<div id="nav-toggle-alt" onclick="toggle()">X</div>
+	</nav>
+	</header>
+	<!--menu bitis-->
+	
+
+<footer class="footer-burcu" style="margin-top: 5%;">
+	<div class="footer-left">
+		<h3>Basak Burcu<span>SOGUT</span></h3>
+		<p class="footer-links">
+		<a href="index.html">Ana Sayfa</a>
+		·
+		<a href="hakkımda.html">Hakkımda</a>
+		·
+		<a href="iletisim.html" target="_blank">İletişim</a>
+		</p>
+		<p class="footer-textburcu">© 2019 Tüm Hakları Saklıdır.</p>
+		</div>
+		<div class="footer-center">
+		<div>
+			<a href="https://www.google.com/maps/place/Kocaeli+%C3%9Cniversitesi+Umuttepe+Kamp%C3%BCs%C3%BC+B+Kap%C4%B1s%C4%B1/@40.8233561,29.9253451,15z/data=!4m5!3m4!1s0x0:0xdb29061ce8f77254!8m2!3d40.8233561!4d29.9253451" style="cursor: pointer;" target="_blank"><i class="fa fa-map-marker"></i></a>
+		<p><span>Umuttepe Kampüsü</span> Kocaeli, Türkiye</p>
+		</div>
+		<div>
+		<i class="fa fa-phone"></i>
+		<p>+0555 555 5050</p>
+		</div>
+		<div>
+		<i class="fa fa-envelope"></i>
+		<p><a href="mailto:basakburcusogut@gmail.com">basakburcusogut@gmail.com</a></p>
+		</div>
+		</div>
+		<div class="footer-right">
+		<p class="footer-basakhak1">
+		<span>Hakkımda</span>
+		Başak Burcu SÖGÜT 171307009 <br>
+		Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliği Bölümü 3.Sınıf
+	</p>
+		<div class="footer-icons">
+		<a href="https://www.facebook.com/basakkburcuu" target="_blank"><i class="fab fa-facebook-square"></i></a>
+		<a href="https://twitter.com/basakkkburcuuu" target="_blank"><i class="fab fa-twitter"></i></a>
+		<a href="https://www.youtube.com/channel/UCuthM9l2SvTLiuFMCEerYJQ?view_as=subscriber" target="_blank"><i class="fab fa-youtube-square"></i></a>
+		<a href="https://www.linkedin.com/in/ba%C5%9Fak-burcu-s%C3%B6g%C3%BCt-95b611153/" target="_blank"><i class="fab fa-linkedin"></i></a>
+		<a href="https://www.instagram.com/basakkburcuu/" target="_blank"><i class="fab fa-instagram"></i></a>
+		</div>
+</div>
+</footer>
+<div id="top">
+	<p style="text-align: center;"><img src="images/yukari.png" alt=""></p>  <!--iconun kaynağı: https://fontawesome.com/icons/arrow-circle-up?style=solid-->
+</div>
+</body>
+</html>
